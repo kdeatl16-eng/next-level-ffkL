@@ -1,69 +1,353 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Next Level FFKL Weekly Challenge Wheel</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
-*{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top,#33280c,#080808 35%,#050505);color:#fff;font-family:Arial,sans-serif}
-.wrap{max-width:980px;margin:auto;padding:24px 16px 70px} .hero{text-align:center} .kicker{color:#f0c75e;letter-spacing:3px;font-size:12px;font-weight:900}
-h1{font-size:clamp(30px,7vw,56px);margin:8px 0} .sub{color:#ccc} .badge{display:inline-block;margin-top:12px;padding:8px 14px;border:1px solid #806521;border-radius:999px;color:#f2c65d;background:#18130a;font-weight:900}
-.grid{display:grid;grid-template-columns:1.08fr .92fr;gap:18px;margin-top:22px} .panel{background:linear-gradient(145deg,#151515,#0d0d0d);border:1px solid #3b3019;border-radius:22px;padding:18px}
-.wheelWrap{position:relative;aspect-ratio:1;max-width:520px;margin:auto} canvas{width:100%;height:100%;display:block} .pointer{position:absolute;top:-2px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:18px solid transparent;border-right:18px solid transparent;border-bottom:36px solid #f7d170;z-index:3}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at top,#33280c,#080808 35%,#050505);color:#fff;font-family:Arial,sans-serif}
+.wrap{max-width:980px;margin:auto;padding:24px 16px 70px}
+.hero{text-align:center}
+.kicker{color:#f0c75e;letter-spacing:3px;font-size:12px;font-weight:900}
+h1{font-size:clamp(30px,7vw,56px);margin:8px 0}
+.sub{color:#ccc}
+.badge{display:inline-block;margin-top:12px;padding:8px 14px;border:1px solid #806521;border-radius:999px;color:#f2c65d;background:#18130a;font-weight:900}
+.grid{display:grid;grid-template-columns:1.08fr .92fr;gap:18px;margin-top:22px}
+.panel{background:linear-gradient(145deg,#151515,#0d0d0d);border:1px solid #3b3019;border-radius:22px;padding:18px}
+.wheelWrap{position:relative;aspect-ratio:1;max-width:520px;margin:auto}
+canvas{width:100%;height:100%;display:block}
+.pointer{position:absolute;top:-2px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:18px solid transparent;border-right:18px solid transparent;border-bottom:36px solid #f7d170;z-index:3}
 .center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:82px;height:82px;border-radius:50%;display:grid;place-items:center;text-align:center;background:linear-gradient(#f5d06e,#a97715);color:#080808;border:6px solid #191919;font-weight:1000}
-.controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:12px} button{border:0;border-radius:14px;padding:14px 17px;font-weight:1000;font-size:15px} .spin{background:linear-gradient(135deg,#f4cb63,#c99118);color:#090909} .complete{background:#202020;color:#f0c75e;border:1px solid #5a4924} .reset{background:#151515;color:#aaa;border:1px solid #333} button:disabled{opacity:.45}
-.now{border:1px solid #6f571c;border-radius:16px;background:#17130a;padding:16px;margin-bottom:14px} .now small,.label{display:block;color:#aaa;letter-spacing:1.5px;font-size:11px;text-transform:uppercase;font-weight:800} .now strong{display:block;color:#f3c85c;font-size:25px;margin:4px 0} .rule{color:#d7d7d7;line-height:1.45;font-size:14px}
-.status{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0} .stat{padding:12px 8px;text-align:center;border-radius:12px;background:#0a0a0a;border:1px solid #282828} .stat b{display:block;color:#f0c45b;font-size:20px} .stat span{font-size:11px;color:#929292}
-.item{display:flex;justify-content:space-between;gap:10px;border-top:1px solid #292929;padding:11px 2px} .item:first-child{border-top:0} .used{color:#8b8b8b;text-decoration:line-through} .active{color:#f2c55c;font-weight:900} .pill{font-size:11px;padding:5px 8px;border-radius:999px;border:1px solid #444;color:#bbb;white-space:nowrap} .activePill{border-color:#8b6c20;color:#f3c65e;background:#1b160a}
-details{margin-top:18px;background:#101010;border:1px solid #302817;border-radius:16px;overflow:hidden} summary{padding:16px;cursor:pointer;color:#f0c75e;font-weight:900} .table{padding:0 15px 15px;display:grid;gap:9px} .challenge{padding:12px;border-radius:12px;background:#0b0b0b;border:1px solid #272727} .challenge p{margin:5px 0 0;color:#aaa;font-size:13px;line-height:1.4}
+.controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+button{border:0;border-radius:14px;padding:14px 17px;font-weight:1000;font-size:15px}
+.spin{background:linear-gradient(135deg,#f4cb63,#c99118);color:#090909}
+.complete{background:#202020;color:#f0c75e;border:1px solid #5a4924}
+.reset{background:#151515;color:#aaa;border:1px solid #333}
+button:disabled{opacity:.45}
+.now{border:1px solid #6f571c;border-radius:16px;background:#17130a;padding:16px;margin-bottom:14px}
+.now small,.label{display:block;color:#aaa;letter-spacing:1.5px;font-size:11px;text-transform:uppercase;font-weight:800}
+.now strong{display:block;color:#f3c85c;font-size:25px;margin:4px 0}
+.rule{color:#d7d7d7;line-height:1.45;font-size:14px}
+.status{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.stat{padding:12px 8px;text-align:center;border-radius:12px;background:#0a0a0a;border:1px solid #282828}
+.stat b{display:block;color:#f0c45b;font-size:20px}
+.stat span{font-size:11px;color:#929292}
+.item{display:flex;justify-content:space-between;gap:10px;border-top:1px solid #292929;padding:11px 2px}
+.item:first-child{border-top:0}
+.used{color:#8b8b8b;text-decoration:line-through}
+.active{color:#f2c55c;font-weight:900}
+.pill{font-size:11px;padding:5px 8px;border-radius:999px;border:1px solid #444;color:#bbb;white-space:nowrap}
+.activePill{border-color:#8b6c20;color:#f3c65e;background:#1b160a}
 .notice{margin-top:18px;border-left:4px solid #e2b23d;padding:12px 14px;background:#17130a;color:#d8d8d8;border-radius:8px;line-height:1.45}
+.authbox{margin-top:14px;background:#0b0b0b;border:1px solid #40351d;border-radius:14px;padding:14px}
+.authbox h3{margin:0 0 8px;color:#f0c75e}
+.authrow{display:flex;gap:8px;flex-wrap:wrap}
+.authrow input{flex:1;min-width:180px;border:1px solid #444;background:#151515;color:#fff;border-radius:10px;padding:12px;font-size:15px}
+.authmsg{font-size:12px;color:#aaa;margin-top:8px;line-height:1.4}
+details{margin-top:18px;background:#101010;border:1px solid #302817;border-radius:16px;overflow:hidden}
+summary{padding:16px;cursor:pointer;color:#f0c75e;font-weight:900}
+.table{padding:0 15px 15px;display:grid;gap:9px}
+.challenge{padding:12px;border-radius:12px;background:#0b0b0b;border:1px solid #272727}
+.challenge p{margin:5px 0 0;color:#aaa;font-size:13px;line-height:1.4}
 @media(max-width:760px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<div class="hero"><div class="kicker">NEXT LEVEL FFKL • EST. 2014</div><h1>🎡 WEEKLY CHALLENGE WHEEL</h1><div class="sub">$20 Weekly Bonus • Winner earns the next spin</div><div class="badge">WEEK 1: LARGEST MARGIN • LOCKED</div></div>
+<div class="hero">
+  <div class="kicker">NEXT LEVEL FFKL • EST. 2014</div>
+  <h1>🎡 WEEKLY CHALLENGE WHEEL</h1>
+  <div class="sub">$20 Weekly Bonus • Official Commissioner Spin</div>
+  <div class="badge">WEEK 1: LARGEST MARGIN • LOCKED</div>
+</div>
+
 <div class="grid">
 <section class="panel">
-<div class="wheelWrap"><div class="pointer"></div><canvas id="wheel" width="760" height="760"></canvas><div class="center">NEXT<br>LEVEL</div></div>
-<div class="controls"><button class="spin" id="spinBtn">🎯 SPIN FOR NEXT WEEK</button><button class="complete" id="completeBtn" disabled>✅ MARK COMPLETED</button><button class="reset" id="resetBtn">↻ RESET DEMO</button></div><div class="controls"><button class="complete" id="copyBtn" disabled>📋 COPY FOR GROUPME</button></div>
+  <div class="wheelWrap">
+    <div class="pointer"></div>
+    <canvas id="wheel" width="760" height="760"></canvas>
+    <div class="center">NEXT<br>LEVEL</div>
+  </div>
+
+  <div class="controls">
+    <button class="spin" id="spinBtn" disabled>🔒 COMMISSIONER SIGN-IN REQUIRED</button>
+    <button class="complete" id="completeBtn" disabled>✅ MARK COMPLETED</button>
+  </div>
+  <div class="controls">
+    <button class="complete" id="copyBtn" disabled>📋 COPY FOR GROUPME</button>
+  </div>
+
+  <div class="authbox">
+    <h3>🔐 Commissioner Control</h3>
+    <div id="signedOutBox">
+      <div class="authrow">
+        <input id="emailInput" type="email" placeholder="Commissioner email">
+        <input id="passwordInput" type="password" placeholder="Password">
+        <button id="loginBtn" class="spin">SIGN IN</button>
+      </div>
+      <div class="authmsg">Everyone can view the official wheel. Only the Commissioner account can spin or mark a challenge complete.</div>
+    </div>
+    <div id="signedInBox" style="display:none">
+      <div class="authrow">
+        <button id="logoutBtn" class="reset">SIGN OUT</button>
+      </div>
+      <div class="authmsg">Commissioner mode is active.</div>
+    </div>
+    <div class="authmsg" id="authStatus">Loading official wheel...</div>
+  </div>
 </section>
+
 <aside class="panel">
-<div class="now"><small>Current / Selected Challenge</small><strong id="currentName">Week 1 • Largest Margin</strong><div class="rule" id="currentHow">Team that wins by the largest margin of victory.</div></div>
-<div class="status"><div class="stat"><b id="remainCount">13</b><span>On Wheel</span></div><div class="stat"><b id="usedCount">1</b><span>Used</span></div><div class="stat"><b>$20</b><span>Weekly Prize</span></div></div>
-<div class="label">Wheel History</div><div id="history"></div>
-<div class="notice"><b>Official spin rule:</b> All official spins are conducted by the Commissioner and the result is posted in the league GroupMe.<br><br><b>Elimination rule:</b> once a challenge is completed, mark it complete and it disappears from the wheel for the rest of the season.</div>
+  <div class="now">
+    <small>Current / Selected Challenge</small>
+    <strong id="currentName">Loading...</strong>
+    <div class="rule" id="currentHow"></div>
+  </div>
+
+  <div class="status">
+    <div class="stat"><b id="remainCount">13</b><span>On Wheel</span></div>
+    <div class="stat"><b id="usedCount">1</b><span>Used</span></div>
+    <div class="stat"><b>$20</b><span>Weekly Prize</span></div>
+  </div>
+
+  <div class="label">Official Wheel History</div>
+  <div id="history"></div>
+
+  <div class="notice">
+    <b>Official spin rule:</b> all official spins are conducted by the Commissioner and posted in GroupMe.
+    <br><br><b>Elimination rule:</b> after a challenge is completed, it is removed from future spins.
+  </div>
 </aside>
 </div>
-<details><summary>📋 View all 13 wheel challenges</summary><div class="table"><div class='challenge'><b>2. Dynamic Duo</b><p>Highest combined score from the team's highest-scoring STARTING RB + highest-scoring STARTING WR.<br><strong>Tiebreaker:</strong> Highest individual score between the RB/WR, then highest team score.</p></div><div class='challenge'><b>3. Top Dawg</b><p>Highest overall team score.<br><strong>Tiebreaker:</strong> Most points above ESPN projection.</p></div><div class='challenge'><b>4. Bench Mob</b><p>Most total fantasy points on the bench.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>5. Nail Biter</b><p>Winning team with the smallest margin of victory.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>6. Air Raid</b><p>Highest-scoring starting QB.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>7. Golden Leg</b><p>Highest-scoring starting kicker.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>8. Lockdown</b><p>Highest-scoring starting D/ST.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>9. Lucky Dog</b><p>Lowest-scoring team that still wins its matchup.<br><strong>Tiebreaker:</strong> Smallest margin of victory, then highest-scoring individual starter.</p></div><div class='challenge'><b>10. RB Beast</b><p>Highest-scoring starting RB.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>11. WR1</b><p>Highest-scoring starting WR.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>12. TE Takeover</b><p>Highest-scoring starting TE.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>13. One-Man Army</b><p>Highest-scoring individual offensive starter.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>14. Flex Appeal</b><p>Highest-scoring player started in the FLEX position.<br><strong>Tiebreaker:</strong> Highest team score, then largest margin of victory.</p></div></div></details>
+
+<details>
+  <summary>📋 View all 13 wheel challenges</summary>
+  <div class="table">
+    <div class='challenge'><b>2. Dynamic Duo</b><p>Highest combined score from the team's highest-scoring STARTING RB + highest-scoring STARTING WR.<br><strong>Tiebreaker:</strong> Highest individual score between the RB/WR, then highest team score.</p></div><div class='challenge'><b>3. Top Dawg</b><p>Highest overall team score.<br><strong>Tiebreaker:</strong> Most points above ESPN projection.</p></div><div class='challenge'><b>4. Bench Mob</b><p>Most total fantasy points on the bench.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>5. Nail Biter</b><p>Winning team with the smallest margin of victory.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>6. Air Raid</b><p>Highest-scoring starting QB.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>7. Golden Leg</b><p>Highest-scoring starting kicker.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>8. Lockdown</b><p>Highest-scoring starting D/ST.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>9. Lucky Dog</b><p>Lowest-scoring team that still wins its matchup.<br><strong>Tiebreaker:</strong> Smallest margin of victory, then highest-scoring individual starter.</p></div><div class='challenge'><b>10. RB Beast</b><p>Highest-scoring starting RB.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>11. WR1</b><p>Highest-scoring starting WR.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>12. TE Takeover</b><p>Highest-scoring starting TE.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>13. One-Man Army</b><p>Highest-scoring individual offensive starter.<br><strong>Tiebreaker:</strong> Highest team score.</p></div><div class='challenge'><b>14. Flex Appeal</b><p>Highest-scoring player started in the FLEX position.<br><strong>Tiebreaker:</strong> Highest team score, then largest margin of victory.</p></div>
+  </div>
+</details>
 </div>
+
 <script>
-const challengeDetails = [{"name": "Dynamic Duo", "how": "Highest combined score from the team's highest-scoring STARTING RB + highest-scoring STARTING WR.", "tb": "Highest individual score between the RB/WR, then highest team score."}, {"name": "Top Dawg", "how": "Highest overall team score.", "tb": "Most points above ESPN projection."}, {"name": "Bench Mob", "how": "Most total fantasy points on the bench.", "tb": "Highest team score."}, {"name": "Nail Biter", "how": "Winning team with the smallest margin of victory.", "tb": "Highest team score."}, {"name": "Air Raid", "how": "Highest-scoring starting QB.", "tb": "Highest team score."}, {"name": "Golden Leg", "how": "Highest-scoring starting kicker.", "tb": "Highest team score."}, {"name": "Lockdown", "how": "Highest-scoring starting D/ST.", "tb": "Highest team score."}, {"name": "Lucky Dog", "how": "Lowest-scoring team that still wins its matchup.", "tb": "Smallest margin of victory, then highest-scoring individual starter."}, {"name": "RB Beast", "how": "Highest-scoring starting RB.", "tb": "Highest team score."}, {"name": "WR1", "how": "Highest-scoring starting WR.", "tb": "Highest team score."}, {"name": "TE Takeover", "how": "Highest-scoring starting TE.", "tb": "Highest team score."}, {"name": "One-Man Army", "how": "Highest-scoring individual offensive starter.", "tb": "Highest team score."}, {"name": "Flex Appeal", "how": "Highest-scoring player started in the FLEX position.", "tb": "Highest team score, then largest margin of victory."}];
-let remaining = challengeDetails.map(x=>x.name), used=["Largest Margin"], active=null, week=2, spinning=false, rotation=0;
-const canvas=document.getElementById('wheel'),ctx=canvas.getContext('2d');
-const spinBtn=document.getElementById('spinBtn'),completeBtn=document.getElementById('completeBtn'),copyBtn=document.getElementById('copyBtn');
+const SUPABASE_URL="https://zevljohqomufvexinuxm.supabase.co";
+const SUPABASE_KEY="sb_publishable_S90pFx2f6zjyDKdZq9jKhQ_pPpFvN6k";
+const COMMISSIONER_UID="70c16064-2ff8-4207-aa7c-6793b2f80096";
+const challengeDetails=[{"name": "Dynamic Duo", "how": "Highest combined score from the team's highest-scoring STARTING RB + highest-scoring STARTING WR.", "tb": "Highest individual score between the RB/WR, then highest team score."}, {"name": "Top Dawg", "how": "Highest overall team score.", "tb": "Most points above ESPN projection."}, {"name": "Bench Mob", "how": "Most total fantasy points on the bench.", "tb": "Highest team score."}, {"name": "Nail Biter", "how": "Winning team with the smallest margin of victory.", "tb": "Highest team score."}, {"name": "Air Raid", "how": "Highest-scoring starting QB.", "tb": "Highest team score."}, {"name": "Golden Leg", "how": "Highest-scoring starting kicker.", "tb": "Highest team score."}, {"name": "Lockdown", "how": "Highest-scoring starting D/ST.", "tb": "Highest team score."}, {"name": "Lucky Dog", "how": "Lowest-scoring team that still wins its matchup.", "tb": "Smallest margin of victory, then highest-scoring individual starter."}, {"name": "RB Beast", "how": "Highest-scoring starting RB.", "tb": "Highest team score."}, {"name": "WR1", "how": "Highest-scoring starting WR.", "tb": "Highest team score."}, {"name": "TE Takeover", "how": "Highest-scoring starting TE.", "tb": "Highest team score."}, {"name": "One-Man Army", "how": "Highest-scoring individual offensive starter.", "tb": "Highest team score."}, {"name": "Flex Appeal", "how": "Highest-scoring player started in the FLEX position.", "tb": "Highest team score, then largest margin of victory."}];
+const sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
+
+let remaining=challengeDetails.map(x=>x.name);
+let used=['Largest Margin'];
+let active=null;
+let week=2;
+let spinning=false;
+let rotation=0;
+let commissioner=false;
+
+const canvas=document.getElementById('wheel');
+const ctx=canvas.getContext('2d');
+const spinBtn=document.getElementById('spinBtn');
+const completeBtn=document.getElementById('completeBtn');
+const copyBtn=document.getElementById('copyBtn');
+const emailInput=document.getElementById('emailInput');
+const passwordInput=document.getElementById('passwordInput');
+const loginBtn=document.getElementById('loginBtn');
+const logoutBtn=document.getElementById('logoutBtn');
+const signedOutBox=document.getElementById('signedOutBox');
+const signedInBox=document.getElementById('signedInBox');
+const authStatus=document.getElementById('authStatus');
+
 function drawWheel(){
- const W=canvas.width,c=W/2,r=W*.455;ctx.clearRect(0,0,W,W);
- if(!remaining.length){ctx.beginPath();ctx.arc(c,c,r,0,Math.PI*2);ctx.fillStyle='#171717';ctx.fill();ctx.strokeStyle='#e2b23d';ctx.lineWidth=10;ctx.stroke();ctx.fillStyle='#f0c75e';ctx.font='bold 34px Arial';ctx.textAlign='center';ctx.fillText('ALL CHALLENGES USED',c,c);return;}
- const arc=Math.PI*2/remaining.length;
- remaining.forEach((name,i)=>{const s=rotation+i*arc-Math.PI/2,e=s+arc;ctx.beginPath();ctx.moveTo(c,c);ctx.arc(c,c,r,s,e);ctx.closePath();ctx.fillStyle=i%2?'#181818':'#d2a02d';ctx.fill();ctx.strokeStyle='#090909';ctx.lineWidth=5;ctx.stroke();ctx.save();ctx.translate(c,c);ctx.rotate(s+arc/2);ctx.textAlign='right';ctx.fillStyle=i%2?'#f2c962':'#080808';ctx.font=`900 ${remaining.length>10?21:26}px Arial`;ctx.fillText(name,r-30,8);ctx.restore();});
- ctx.beginPath();ctx.arc(c,c,r,0,Math.PI*2);ctx.strokeStyle='#f1c65c';ctx.lineWidth=12;ctx.stroke();
+  const W=canvas.width,c=W/2,r=W*.455;
+  ctx.clearRect(0,0,W,W);
+  if(!remaining.length){
+    ctx.beginPath();ctx.arc(c,c,r,0,Math.PI*2);ctx.fillStyle='#171717';ctx.fill();
+    ctx.strokeStyle='#e2b23d';ctx.lineWidth=10;ctx.stroke();
+    ctx.fillStyle='#f0c75e';ctx.font='bold 34px Arial';ctx.textAlign='center';
+    ctx.fillText('ALL CHALLENGES USED',c,c);return;
+  }
+  const arc=Math.PI*2/remaining.length;
+  remaining.forEach((name,i)=>{
+    const s=rotation+i*arc-Math.PI/2,e=s+arc;
+    ctx.beginPath();ctx.moveTo(c,c);ctx.arc(c,c,r,s,e);ctx.closePath();
+    ctx.fillStyle=i%2?'#181818':'#d2a02d';ctx.fill();
+    ctx.strokeStyle='#090909';ctx.lineWidth=5;ctx.stroke();
+    ctx.save();ctx.translate(c,c);ctx.rotate(s+arc/2);ctx.textAlign='right';
+    ctx.fillStyle=i%2?'#f2c962':'#080808';
+    ctx.font=`900 ${remaining.length>10?21:26}px Arial`;
+    ctx.fillText(name,r-30,8);ctx.restore();
+  });
+  ctx.beginPath();ctx.arc(c,c,r,0,Math.PI*2);ctx.strokeStyle='#f1c65c';ctx.lineWidth=12;ctx.stroke();
 }
+
 function render(){
- document.getElementById('remainCount').textContent=remaining.length;document.getElementById('usedCount').textContent=used.length;
- let h=`<div class="item"><span class="used">Week 1 • Largest Margin</span><span class="pill">LOCKED / USED</span></div>`;
- used.filter(x=>x!=='Largest Margin').forEach(x=>h+=`<div class="item"><span class="used">${x}</span><span class="pill">USED</span></div>`);
- if(active) h+=`<div class="item"><span class="active">Week ${week} • ${active}</span><span class="pill activePill">ACTIVE</span></div>`;
- document.getElementById('history').innerHTML=h;
- if(active){const d=challengeDetails.find(x=>x.name===active);document.getElementById('currentName').textContent=`Week ${week} • ${active}`;document.getElementById('currentHow').textContent=d.how+' Tiebreaker: '+d.tb;}
- else if(used.length===1){document.getElementById('currentName').textContent='Week 1 • Largest Margin';document.getElementById('currentHow').textContent='Team that wins by the largest margin of victory.';}
- else{document.getElementById('currentName').textContent='Waiting for next spin';document.getElementById('currentHow').textContent='The previous challenge is complete. Spin for the next week.';}
- spinBtn.disabled=spinning||!!active||!remaining.length;completeBtn.disabled=!active||spinning;copyBtn.disabled=!active||spinning;drawWheel();
+  document.getElementById('remainCount').textContent=remaining.length;
+  document.getElementById('usedCount').textContent=used.length;
+
+  let h=`<div class="item"><span class="used">Week 1 • Largest Margin</span><span class="pill">LOCKED / USED</span></div>`;
+  used.filter(x=>x!=='Largest Margin').forEach((x,i)=>{
+    h+=`<div class="item"><span class="used">Week ${i+2} • ${x}</span><span class="pill">USED</span></div>`;
+  });
+  if(active) h+=`<div class="item"><span class="active">Week ${week} • ${active}</span><span class="pill activePill">ACTIVE</span></div>`;
+  document.getElementById('history').innerHTML=h;
+
+  if(active){
+    const d=challengeDetails.find(x=>x.name===active);
+    document.getElementById('currentName').textContent=`Week ${week} • ${active}`;
+    document.getElementById('currentHow').textContent=d.how+' Tiebreaker: '+d.tb;
+  } else {
+    document.getElementById('currentName').textContent=`Week ${week} • Waiting for official spin`;
+    document.getElementById('currentHow').textContent='The Commissioner will spin for the next $20 weekly challenge.';
+  }
+
+  spinBtn.disabled=!commissioner||spinning||!!active||!remaining.length;
+  completeBtn.disabled=!commissioner||!active||spinning;
+  copyBtn.disabled=!active||spinning;
+  spinBtn.textContent=commissioner?'🎯 SPIN FOR NEXT WEEK':'🔒 COMMISSIONER SIGN-IN REQUIRED';
+
+  signedOutBox.style.display=commissioner?'none':'block';
+  signedInBox.style.display=commissioner?'block':'none';
+  drawWheel();
 }
-spinBtn.onclick=()=>{if(spinning||active||!remaining.length)return;spinning=true;const chosen=Math.floor(Math.random()*remaining.length),arc=Math.PI*2/remaining.length,startRot=rotation,targetCenter=chosen*arc+arc/2,targetRot=startRot+Math.PI*2*6+(Math.PI*2-(targetCenter%(Math.PI*2))),start=performance.now(),dur=3200;
- function anim(now){const t=Math.min(1,(now-start)/dur),ease=1-Math.pow(1-t,4);rotation=startRot+(targetRot-startRot)*ease;drawWheel();if(t<1)requestAnimationFrame(anim);else{active=remaining[chosen];spinning=false;render();}}requestAnimationFrame(anim);};
-completeBtn.onclick=()=>{if(!active)return;remaining=remaining.filter(x=>x!==active);used.push(active);active=null;week++;rotation=0;render();};
-document.getElementById('resetBtn').onclick=()=>{remaining=challengeDetails.map(x=>x.name);used=['Largest Margin'];active=null;week=2;rotation=0;spinning=false;render();};
-copyBtn.onclick=async()=>{if(!active)return;const d=challengeDetails.find(x=>x.name===active);const msg=`🏆 NEXT LEVEL FFKL WEEK ${week} BONUS\n\n🎡 THE WHEEL HAS SPOKEN!\n\nChallenge: ${active}\n${d.how}\n\n💰 Prize: $20\nTiebreaker: ${d.tb}\n\nGood luck fellas! 🏈`;try{await navigator.clipboard.writeText(msg);const old=copyBtn.textContent;copyBtn.textContent='✅ COPIED FOR GROUPME';setTimeout(()=>copyBtn.textContent=old,1800);}catch(e){window.prompt('Copy this GroupMe announcement:',msg);}};
-render();
+
+async function loadWheelState(){
+  const {data,error}=await sb.from('wheel_state').select('*').eq('id',1).single();
+  if(error){
+    authStatus.textContent='Could not load official wheel: '+error.message;
+    return;
+  }
+  week=data.current_week||2;
+  active=data.active_challenge||null;
+  used=Array.isArray(data.completed_challenges)?data.completed_challenges:['Largest Margin'];
+  remaining=challengeDetails.map(x=>x.name).filter(x=>!used.includes(x) && x!==active);
+  render();
+}
+
+async function saveWheelState(){
+  const history=[
+    {week:1,challenge:'Largest Margin',status:'locked'},
+    ...used.filter(x=>x!=='Largest Margin').map((x,i)=>({week:i+2,challenge:x,status:'completed'})),
+    ...(active?[{week,challenge:active,status:'active'}]:[])
+  ];
+  const {error}=await sb.from('wheel_state').update({
+    current_week:week,
+    active_challenge:active,
+    completed_challenges:used,
+    history:history,
+    updated_at:new Date().toISOString()
+  }).eq('id',1);
+  if(error) throw error;
+}
+
+async function refreshAuth(){
+  const {data:{session}}=await sb.auth.getSession();
+  commissioner=!!(session && session.user && session.user.id===COMMISSIONER_UID);
+  authStatus.textContent=commissioner?'Commissioner controls unlocked.':'Public read-only mode.';
+  render();
+}
+
+loginBtn.onclick=async()=>{
+  authStatus.textContent='Signing in...';
+  const {data,error}=await sb.auth.signInWithPassword({
+    email:emailInput.value.trim(),
+    password:passwordInput.value
+  });
+  if(error){
+    authStatus.textContent='Sign-in failed: '+error.message;
+    return;
+  }
+  commissioner=!!(data.user && data.user.id===COMMISSIONER_UID);
+  if(!commissioner){
+    await sb.auth.signOut();
+    authStatus.textContent='This account is not authorized as Commissioner.';
+    render();
+    return;
+  }
+  emailInput.value='';
+  passwordInput.value='';
+  authStatus.textContent='Commissioner controls unlocked.';
+  render();
+};
+
+logoutBtn.onclick=async()=>{
+  await sb.auth.signOut();
+  commissioner=false;
+  authStatus.textContent='Public read-only mode.';
+  render();
+};
+
+spinBtn.onclick=()=>{
+  if(!commissioner||spinning||active||!remaining.length)return;
+  spinning=true;render();
+
+  const chosen=Math.floor(Math.random()*remaining.length);
+  const arc=Math.PI*2/remaining.length;
+  const startRot=rotation;
+  const targetCenter=chosen*arc+arc/2;
+  const targetRot=startRot+Math.PI*2*6+(Math.PI*2-(targetCenter%(Math.PI*2)));
+  const start=performance.now(),dur=3200;
+
+  function anim(now){
+    const t=Math.min(1,(now-start)/dur),ease=1-Math.pow(1-t,4);
+    rotation=startRot+(targetRot-startRot)*ease;
+    drawWheel();
+    if(t<1){
+      requestAnimationFrame(anim);
+    } else {
+      active=remaining[chosen];
+      spinning=false;
+      saveWheelState()
+        .then(()=>{authStatus.textContent='Official spin saved for everyone.';render();})
+        .catch(e=>{authStatus.textContent='Save failed: '+e.message;render();});
+    }
+  }
+  requestAnimationFrame(anim);
+};
+
+completeBtn.onclick=async()=>{
+  if(!commissioner||!active)return;
+  const completed=active;
+  used.push(completed);
+  active=null;
+  week++;
+  remaining=challengeDetails.map(x=>x.name).filter(x=>!used.includes(x));
+  rotation=0;
+  try{
+    await saveWheelState();
+    authStatus.textContent=completed+' marked completed and removed from the wheel.';
+  }catch(e){
+    authStatus.textContent='Save failed: '+e.message;
+  }
+  render();
+};
+
+copyBtn.onclick=async()=>{
+  if(!active)return;
+  const d=challengeDetails.find(x=>x.name===active);
+  const msg=`🏆 NEXT LEVEL FFKL WEEK ${week} BONUS
+
+🎡 THE WHEEL HAS SPOKEN!
+
+Challenge: ${active}
+${d.how}
+
+💰 Prize: $20
+Tiebreaker: ${d.tb}
+
+Good luck fellas! 🏈`;
+  try{
+    await navigator.clipboard.writeText(msg);
+    const old=copyBtn.textContent;
+    copyBtn.textContent='✅ COPIED FOR GROUPME';
+    setTimeout(()=>copyBtn.textContent=old,1800);
+  }catch(e){
+    window.prompt('Copy this GroupMe announcement:',msg);
+  }
+};
+
+sb.auth.onAuthStateChange(()=>refreshAuth());
+loadWheelState().then(refreshAuth);
 </script>
-</body></html>
+</body>
+</html>
