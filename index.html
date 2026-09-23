@@ -190,64 +190,32 @@ font-weight:1000;letter-spacing:.4px;box-shadow:0 10px 25px #0008;max-width:520p
 <section id="league-central">
 <div class="lc-kicker">Next Level FFKL • ESPN Sync</div>
 <h2 class="lc-title">🏈 LEAGUE <span>CENTRAL</span></h2>
-<p class="lc-sub">Your commissioner dashboard for the 2026 season: current ESPN standings, Week 2 matchup projections, and the latest league activity in one place.</p>
-<div class="lc-sync"><span class="lc-dot"></span> ESPN CONNECTED • SNAPSHOT UPDATED SEP 15, 2026</div>
+<p class="lc-sub" id="lcSub">Your commissioner dashboard for the 2026 season: current ESPN standings, Week 3 matchup projections, and the latest league activity in one place.</p>
+<div class="lc-sync" id="lcSync"><span class="lc-dot"></span> <span id="lcSyncText">AUTO SYNC • UPDATED SEP 23, 2026</span></div>
 <div class="lc-kpis">
-<div class="lc-kpi"><strong>16</strong><span>League Teams</span></div>
-<div class="lc-kpi"><strong>2</strong><span>Current Week</span></div>
-<div class="lc-kpi"><strong>2</strong><span>Keepers Per Team</span></div>
-<div class="lc-kpi"><strong>+2 / +3</strong><span>Reg / Playoff HFA</span></div>
+<div class="lc-kpi"><strong id="lcTeamCount">16</strong><span>League Teams</span></div>
+<div class="lc-kpi"><strong id="lcCurrentWeek">3</strong><span>Current Week</span></div>
+<div class="lc-kpi"><strong id="lcKeeperCount">2</strong><span>Keepers Per Team</span></div>
+<div class="lc-kpi"><strong id="lcHfa">+2 / +3</strong><span>Reg / Playoff HFA</span></div>
 </div>
 <div class="lc-grid">
 <div class="lc-panel">
-<div class="lc-panel-head"><h3>📊 Current Standings</h3><p>Ordered by ESPN playoff seed after Week 1.</p></div>
-<div class="lc-table-wrap"><table class="lc-table"><thead><tr><th>Seed</th><th>Team</th><th>Record</th><th>PF</th><th>PA</th></tr></thead><tbody><tr class="lc-playoff"><td class="lc-seed">1</td><td>ShowMeYourTDs !</td><td>1-0</td><td>155.36</td><td>72.92</td></tr><tr class="lc-playoff"><td class="lc-seed">2</td><td>Canadian Content</td><td>1-0</td><td>141.64</td><td>72.16</td></tr><tr class="lc-playoff"><td class="lc-seed">3</td><td>G🏈ALINERS</td><td>1-0</td><td>115.26</td><td>114.96</td></tr><tr class="lc-playoff"><td class="lc-seed">4</td><td>IRIGHTI</td><td>1-0</td><td>115.20</td><td>103.50</td></tr><tr class="lc-playoff"><td class="lc-seed">5</td><td>New Kind of Kick (16tm,KPR,PPR)</td><td>1-0</td><td>134.70</td><td>111.74</td></tr><tr class="lc-playoff"><td class="lc-seed">6</td><td>MJ DA 🐐</td><td>1-0</td><td>114.42</td><td>112.16</td></tr><tr><td class="lc-seed">7</td><td>Speed Kills</td><td>1-0</td><td>112.66</td><td>99.60</td></tr><tr><td class="lc-seed">8</td><td>DET Knights</td><td>1-0</td><td>103.74</td><td>99.60</td></tr><tr><td class="lc-seed">9</td><td>Fantasy Guinball</td><td>0-1</td><td>114.96</td><td>115.26</td></tr><tr><td class="lc-seed">10</td><td>Mobgang</td><td>0-1</td><td>112.16</td><td>114.42</td></tr><tr><td class="lc-seed">11</td><td>Rolltide</td><td>0-1</td><td>111.74</td><td>134.70</td></tr><tr><td class="lc-seed">12</td><td>Agave Armada</td><td>0-1</td><td>103.50</td><td>115.20</td></tr><tr><td class="lc-seed">13</td><td>@ PaperChamp™️</td><td>0-1</td><td>99.60</td><td>112.66</td></tr><tr><td class="lc-seed">14</td><td>Dart Side of the Moon</td><td>0-1</td><td>99.60</td><td>103.74</td></tr><tr><td class="lc-seed">15</td><td>Average Joes</td><td>0-1</td><td>72.92</td><td>155.36</td></tr><tr><td class="lc-seed">16</td><td>Showtime</td><td>0-1</td><td>72.16</td><td>141.64</td></tr></tbody></table></div>
-<div class="lc-note">Gold rows mark the current Top 6 playoff positions. Standings can change as ESPN processes each week.</div>
+<div class="lc-panel-head"><h3>📊 Current Standings</h3><p id="lcStandingsNote">Ordered by ESPN playoff seed through Week 2.</p></div>
+<div class="lc-table-wrap"><table class="lc-table"><thead><tr><th>Seed</th><th>Team</th><th>Record</th><th>PF</th><th>PA</th></tr></thead><tbody id="lcStandingsBody"><tr class="lc-playoff"><td class="lc-seed">1</td><td>New Kind of Kick (16tm,KPR,PPR)</td><td>2-0</td><td>271.78</td><td>244.58</td></tr><tr class="lc-playoff"><td class="lc-seed">2</td><td>IRIGHTI</td><td>2-0</td><td>245.86</td><td>179.92</td></tr><tr class="lc-playoff"><td class="lc-seed">3</td><td>G🏈ALINERS</td><td>1-1</td><td>234.86</td><td>268.74</td></tr><tr class="lc-playoff"><td class="lc-seed">4</td><td>ShowMeYourTDs !</td><td>1-1</td><td>231.78</td><td>203.58</td></tr><tr class="lc-playoff"><td class="lc-seed">5</td><td>Speed Kills</td><td>2-0</td><td>231.78</td><td>187.98</td></tr><tr class="lc-playoff"><td class="lc-seed">6</td><td>Canadian Content</td><td>1-1</td><td>228.92</td><td>179.26</td></tr><tr><td class="lc-seed">7</td><td>MJ DA 🐐</td><td>1-1</td><td>221.98</td><td>234.14</td></tr><tr><td class="lc-seed">8</td><td>DET Knights</td><td>1-1</td><td>182.44</td><td>191.98</td></tr><tr><td class="lc-seed">9</td><td>Rolltide</td><td>1-1</td><td>265.52</td><td>254.30</td></tr><tr><td class="lc-seed">10</td><td>@ PaperChamp™️</td><td>1-1</td><td>221.58</td><td>220.22</td></tr><tr><td class="lc-seed">11</td><td>Dart Side of the Moon</td><td>1-1</td><td>206.70</td><td>191.02</td></tr><tr><td class="lc-seed">12</td><td>Average Joes</td><td>1-1</td><td>174.34</td><td>226.62</td></tr><tr><td class="lc-seed">13</td><td>Showtime</td><td>1-1</td><td>164.54</td><td>220.34</td></tr><tr><td class="lc-seed">14</td><td>Fantasy Guinball</td><td>0-2</td><td>247.80</td><td>252.34</td></tr><tr><td class="lc-seed">15</td><td>Mobgang</td><td>0-2</td><td>200.54</td><td>233.54</td></tr><tr><td class="lc-seed">16</td><td>Agave Armada</td><td>0-2</td><td>174.76</td><td>216.62</td></tr></tbody></table></div>
+<div class="lc-note">Gold rows mark the current Top 6 playoff positions. Standings refresh from the latest published ESPN league data.</div>
 </div>
 <div class="lc-stack">
 <div class="lc-panel">
-<div class="lc-panel-head"><h3>⚔️ Week 2 Matchups</h3><p>ESPN projected points at the time of this snapshot.</p></div>
-<div class="lc-matchups"><article class="lc-matchup-card">
-<div class="lc-team"><span>G🏈ALINERS</span><strong>120.12</strong></div>
-<div class="lc-vs">VS</div>
-<div class="lc-team"><span>Rolltide</span><strong>105.47</strong></div>
-</article><article class="lc-matchup-card">
-<div class="lc-team"><span>DET Knights</span><strong>111.56</strong></div>
-<div class="lc-vs">VS</div>
-<div class="lc-team"><span>Showtime</span><strong>106.65</strong></div>
-</article><article class="lc-matchup-card">
-<div class="lc-team"><span>Dart Side of the Moon</span><strong>88.98</strong></div>
-<div class="lc-vs">VS</div>
-<div class="lc-team"><span>Canadian Content</span><strong>107.43</strong></div>
-</article><article class="lc-matchup-card">
-<div class="lc-team"><span>Fantasy Guinball</span><strong>123.28</strong></div>
-<div class="lc-vs">VS</div>
-<div class="lc-team"><span>New Kind of Kick (16tm,KPR,PPR)</span><strong>122.90</strong></div>
-</article><article class="lc-matchup-card">
-<div class="lc-team"><span>ShowMeYourTDs !</span><strong>112.66</strong></div>
-<div class="lc-vs">VS</div>
-<div class="lc-team"><span>IRIGHTI</span><strong>95.61</strong></div>
-</article><article class="lc-matchup-card">
-<div class="lc-team"><span>MJ DA 🐐</span><strong>124.66</strong></div>
-<div class="lc-vs">VS</div>
-<div class="lc-team"><span>@ PaperChamp™️</span><strong>116.38</strong></div>
-</article><article class="lc-matchup-card">
-<div class="lc-team"><span>Mobgang</span><strong>108.93</strong></div>
-<div class="lc-vs">VS</div>
-<div class="lc-team"><span>Speed Kills</span><strong>109.14</strong></div>
-</article><article class="lc-matchup-card">
-<div class="lc-team"><span>Average Joes</span><strong>109.62</strong></div>
-<div class="lc-vs">VS</div>
-<div class="lc-team"><span>Agave Armada</span><strong>111.83</strong></div>
-</article></div>
+<div class="lc-panel-head"><h3 id="lcMatchupTitle">⚔️ Week 3 Matchups</h3><p>ESPN projected points from the latest sync.</p></div>
+<div class="lc-matchups" id="lcMatchups"><article class="lc-matchup-card"><div class="lc-team"><span>Showtime</span><strong>103.93</strong></div><div class="lc-vs">VS</div><div class="lc-team"><span>G🏈ALINERS</span><strong>120.63</strong></div></article><article class="lc-matchup-card"><div class="lc-team"><span>Canadian Content</span><strong>118.46</strong></div><div class="lc-vs">VS</div><div class="lc-team"><span>DET Knights</span><strong>95.33</strong></div></article><article class="lc-matchup-card"><div class="lc-team"><span>New Kind of Kick (16tm,KPR,PPR)</span><strong>121.16</strong></div><div class="lc-vs">VS</div><div class="lc-team"><span>Dart Side of the Moon</span><strong>101.98</strong></div></article><article class="lc-matchup-card"><div class="lc-team"><span>Rolltide</span><strong>119.46</strong></div><div class="lc-vs">VS</div><div class="lc-team"><span>Fantasy Guinball</span><strong>103.43</strong></div></article><article class="lc-matchup-card"><div class="lc-team"><span>@ PaperChamp™️</span><strong>120.97</strong></div><div class="lc-vs">VS</div><div class="lc-team"><span>ShowMeYourTDs !</span><strong>108.50</strong></div></article><article class="lc-matchup-card"><div class="lc-team"><span>Speed Kills</span><strong>109.52</strong></div><div class="lc-vs">VS</div><div class="lc-team"><span>MJ DA 🐐</span><strong>117.44</strong></div></article><article class="lc-matchup-card"><div class="lc-team"><span>Agave Armada</span><strong>119.60</strong></div><div class="lc-vs">VS</div><div class="lc-team"><span>Mobgang</span><strong>110.43</strong></div></article><article class="lc-matchup-card"><div class="lc-team"><span>IRIGHTI</span><strong>114.98</strong></div><div class="lc-vs">VS</div><div class="lc-team"><span>Average Joes</span><strong>113.92</strong></div></article></div>
 </div>
 <div class="lc-panel">
-<div class="lc-panel-head"><h3>🔄 Latest League Moves</h3><p>Most recent completed roster adds from ESPN.</p></div>
-<div class="lc-moves"><div class="lc-move"><div class="lc-move-date">Sep 13</div><div><strong>Dart Side of the Moon</strong><br><span>Added Dylan Sampson (RB, CLE)</span><br><small>Dropped Chris Brooks (RB, GB)</small></div></div><div class="lc-move"><div class="lc-move-date">Sep 9</div><div><strong>New Kind of Kick</strong><br><span>Added Michael Mayer (TE, LV)</span><br><small>Dropped Greg Dulcich (TE, MIA)</small></div></div><div class="lc-move"><div class="lc-move-date">Sep 8</div><div><strong>ShowMeYourTDs !</strong><br><span>Added Malik Washington (WR, MIA)</span><br><small>No corresponding drop</small></div></div><div class="lc-move"><div class="lc-move-date">Sep 7</div><div><strong>Average Joes</strong><br><span>Added Kimani Vidal (RB, LAC)</span><br><small>No corresponding drop</small></div></div><div class="lc-move"><div class="lc-move-date">Sep 4</div><div><strong>Dart Side of the Moon</strong><br><span>Added Emmett Johnson (RB, KC)</span><br><small>Dropped Dylan Sampson (RB, CLE)</small></div></div></div>
+<div class="lc-panel-head"><h3>🔄 Latest League Moves</h3><p>Most recent completed roster moves from ESPN.</p></div>
+<div class="lc-moves" id="lcMoves"><div class="lc-move"><div class="lc-move-date">Sep 23</div><div><strong>Dart Side of the Moon</strong><br><span>Added Kaleb Johnson (RB, GB)</span><br><small>Dropped Kirk Cousins (QB, LV)</small></div></div><div class="lc-move"><div class="lc-move-date">Sep 23</div><div><strong>Dart Side of the Moon</strong><br><span>Added Kirk Cousins (QB, LV)</span><br><small>Dropped Jaxson Dart (QB, NYG)</small></div></div><div class="lc-move"><div class="lc-move-date">Sep 23</div><div><strong>New Kind of Kick (16tm,KPR,PPR)</strong><br><span>Added Jaguars D/ST</span><br><small>Dropped Chargers D/ST</small></div></div><div class="lc-move"><div class="lc-move-date">Sep 23</div><div><strong>@ PaperChamp™️</strong><br><span>Added Daniel Carlson (K, NO)</span><br><small>Dropped Cairo Santos (K, CHI)</small></div></div><div class="lc-move"><div class="lc-move-date">Sep 23</div><div><strong>MJ DA 🐐</strong><br><span>Added Keon Coleman (WR, BUF)</span><br><small>Dropped Jaylin Noel (WR, HOU)</small></div></div></div>
 </div>
 </div>
 </div>
-<div class="lc-disclaimer"><b>How this works:</b> ESPN is connected to the commissioner through the league-data integration. This GitHub Pages dashboard is a published snapshot, not a browser login to ESPN. No ESPN password, private cookie, or commissioner credential is stored in this public page.</div>
+<div class="lc-disclaimer"><b>Automatic League Central:</b> this page reads <code>league-central.json</code> from the site. The data file can be refreshed without replacing the full homepage. No ESPN password, private cookie, or commissioner credential is stored in this public page.</div>
 </section>
 <!-- LEAGUE_CENTRAL_END -->
 
@@ -667,6 +635,62 @@ font-weight:1000;letter-spacing:.4px;box-shadow:0 10px 25px #0008;max-width:520p
   setInterval(()=>{loadVideos();loadNews();},10*60*1000);
 })();
 /* NEXT LEVEL FANTASY TV END */
+</script>
+
+
+<script id="leagueCentralAutoSync">
+(function(){
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const rec = x => `${x.wins}-${x.losses}${x.ties ? '-' + x.ties : ''}`;
+  function renderLeagueCentral(d){
+    if(!d || !Array.isArray(d.standings)) return;
+    const week = Number(d.currentWeek || 0);
+    const prevWeek = Math.max(0, week - 1);
+    document.getElementById('lcSub').textContent =
+      `Your commissioner dashboard for the ${d.season} season: current ESPN standings, Week ${week} matchup projections, and the latest league activity in one place.`;
+    document.getElementById('lcSyncText').textContent = `AUTO SYNC • UPDATED ${d.updatedLabel || 'RECENTLY'}`;
+    document.getElementById('lcTeamCount').textContent = d.teamCount ?? d.standings.length;
+    document.getElementById('lcCurrentWeek').textContent = week;
+    document.getElementById('lcKeeperCount').textContent = d.keepersPerTeam ?? 2;
+    document.getElementById('lcHfa').textContent = `+${d.regularSeasonHFA ?? 2} / +${d.playoffHFA ?? 3}`;
+    document.getElementById('lcStandingsNote').textContent =
+      prevWeek ? `Ordered by ESPN playoff seed through Week ${prevWeek}.` : 'Ordered by ESPN playoff seed.';
+    document.getElementById('lcMatchupTitle').textContent = `⚔️ Week ${week} Matchups`;
+
+    document.getElementById('lcStandingsBody').innerHTML = d.standings.map(x =>
+      `<tr${Number(x.playoffSeed)<=6?' class="lc-playoff"':''}>`+
+      `<td class="lc-seed">${esc(x.playoffSeed)}</td><td>${esc(x.teamName)}</td>`+
+      `<td>${esc(rec(x))}</td><td>${Number(x.pointsFor||0).toFixed(2)}</td><td>${Number(x.pointsAgainst||0).toFixed(2)}</td></tr>`
+    ).join('');
+
+    document.getElementById('lcMatchups').innerHTML = (d.matchups||[]).map(m =>
+      `<article class="lc-matchup-card"><div class="lc-team"><span>${esc(m.home)}</span>`+
+      `<strong>${Number(m.homeProjected||0).toFixed(2)}</strong></div><div class="lc-vs">VS</div>`+
+      `<div class="lc-team"><span>${esc(m.away)}</span><strong>${Number(m.awayProjected||0).toFixed(2)}</strong></div></article>`
+    ).join('');
+
+    document.getElementById('lcMoves').innerHTML = (d.moves||[]).map(m =>
+      `<div class="lc-move"><div class="lc-move-date">${esc(m.date)}</div><div><strong>${esc(m.team)}</strong>`+
+      `<br><span>Added ${esc(m.added)}</span><br><small>${m.dropped ? 'Dropped '+esc(m.dropped) : 'No corresponding drop'}</small></div></div>`
+    ).join('');
+  }
+
+  async function refreshLeagueCentral(){
+    try{
+      const res = await fetch(`league-central.json?v=${Date.now()}`, {cache:'no-store'});
+      if(!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      renderLeagueCentral(data);
+      document.getElementById('lcSync')?.classList.add('ok');
+    }catch(err){
+      console.warn('League Central sync unavailable; using embedded snapshot.', err);
+      const sync = document.getElementById('lcSyncText');
+      if(sync) sync.textContent += ' • USING LAST SAVED DATA';
+    }
+  }
+  refreshLeagueCentral();
+  setInterval(refreshLeagueCentral, 10 * 60 * 1000);
+})();
 </script>
 
 </body></html>
