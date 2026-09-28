@@ -1,0 +1,31 @@
+{
+  "season": 2026,
+  "updatedAt": "2026-09-27T23:13:00-04:00",
+  "updatedLabel": "SEP 27, 2026",
+  "weeks": [
+    {
+      "week": 1,
+      "challenge": "Largest Margin",
+      "status": "final",
+      "team": "ShowMeYourTDs !",
+      "result": "82.44-point win",
+      "detail": "155.36–72.92 vs Average Joes"
+    },
+    {
+      "week": 2,
+      "challenge": "Top Dawg",
+      "status": "final",
+      "team": "Rolltide",
+      "result": "153.78 points",
+      "detail": "Highest team score of Week 2"
+    },
+    {
+      "week": 3,
+      "challenge": "Dynamic Duo",
+      "status": "live",
+      "team": "MJ DA 🐐",
+      "result": "62.0 points",
+      "detail": "Bijan Robinson 35.3 + Garrett Wilson 26.7 • current leader"
+    }
+  ]
+}
