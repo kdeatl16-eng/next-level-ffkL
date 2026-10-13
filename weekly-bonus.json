@@ -1,7 +1,7 @@
 {
   "season": 2026,
-  "updatedAt": "2026-09-27T23:13:00-04:00",
-  "updatedLabel": "SEP 27, 2026",
+  "updatedAt": "2026-10-13T15:00:00-04:00",
+  "updatedLabel": "OCT 13, 2026",
   "weeks": [
     {
       "week": 1,
@@ -22,10 +22,26 @@
     {
       "week": 3,
       "challenge": "Dynamic Duo",
-      "status": "live",
+      "status": "final",
       "team": "MJ DA 🐐",
       "result": "62.0 points",
-      "detail": "Bijan Robinson 35.3 + Garrett Wilson 26.7 • current leader"
+      "detail": "Bijan Robinson 35.3 + Garrett Wilson 26.7"
+    },
+    {
+      "week": 4,
+      "challenge": "TE Takeover",
+      "status": "final",
+      "team": "Dart Side of the Moon",
+      "result": "24.9 points",
+      "detail": "T.J. Hockenson 24.9"
+    },
+    {
+      "week": 5,
+      "challenge": "Triple Threat",
+      "status": "final",
+      "team": "@ PaperChamp™️",
+      "result": "92.12 points",
+      "detail": "Matthew Stafford 27.32 + Jaylen Warren 36.80 + George Pickens 28.00"
     }
   ]
 }
