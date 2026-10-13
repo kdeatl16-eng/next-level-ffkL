@@ -2,255 +2,255 @@
   "leagueId": "179274",
   "leagueName": "Next Level FFKL Est.2014",
   "season": 2026,
-  "currentWeek": 3,
+  "currentWeek": 6,
   "teamCount": 16,
   "keepersPerTeam": 2,
   "regularSeasonHFA": 2,
   "playoffHFA": 3,
-  "updatedAt": "2026-09-23T16:45:00-04:00",
-  "updatedLabel": "SEP 23, 2026",
+  "updatedAt": "2026-10-13T15:00:00-04:00",
+  "updatedLabel": "OCT 13, 2026",
   "standings": [
     {
       "teamId": 10,
       "teamName": "New Kind of Kick (16tm,KPR,PPR)",
-      "wins": 2,
+      "wins": 5,
       "losses": 0,
       "ties": 0,
-      "pointsFor": 271.78,
-      "pointsAgainst": 244.58,
+      "pointsFor": 652.58,
+      "pointsAgainst": 531.76,
       "playoffSeed": 1
     },
     {
       "teamId": 7,
       "teamName": "IRIGHTI",
-      "wins": 2,
-      "losses": 0,
+      "wins": 4,
+      "losses": 1,
       "ties": 0,
-      "pointsFor": 245.86,
-      "pointsAgainst": 179.92,
+      "pointsFor": 581.38,
+      "pointsAgainst": 491.9,
       "playoffSeed": 2
     },
     {
       "teamId": 1,
       "teamName": "G🏈ALINERS",
-      "wins": 1,
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "pointsFor": 587.28,
+      "pointsAgainst": 642.26,
+      "playoffSeed": 3
+    },
+    {
+      "teamId": 8,
+      "teamName": "MJ DA 🐐",
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "pointsFor": 611.22,
+      "pointsAgainst": 572.0,
+      "playoffSeed": 4
+    },
+    {
+      "teamId": 2,
+      "teamName": "Rolltide",
+      "wins": 4,
       "losses": 1,
       "ties": 0,
-      "pointsFor": 234.86,
-      "pointsAgainst": 268.74,
-      "playoffSeed": 3
+      "pointsFor": 635.4,
+      "pointsAgainst": 514.44,
+      "playoffSeed": 5
+    },
+    {
+      "teamId": 11,
+      "teamName": "Speed Kills",
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "pointsFor": 552.34,
+      "pointsAgainst": 546.8,
+      "playoffSeed": 6
+    },
+    {
+      "teamId": 12,
+      "teamName": "Mobgang",
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "pointsFor": 491.38,
+      "pointsAgainst": 502.34,
+      "playoffSeed": 7
+    },
+    {
+      "teamId": 9,
+      "teamName": "@ PaperChamp™️",
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "pointsFor": 629.08,
+      "pointsAgainst": 544.78,
+      "playoffSeed": 8
+    },
+    {
+      "teamId": 4,
+      "teamName": "DET Knights",
+      "wins": 2,
+      "losses": 3,
+      "ties": 0,
+      "pointsFor": 463.7,
+      "pointsAgainst": 497.52,
+      "playoffSeed": 9
+    },
+    {
+      "teamId": 6,
+      "teamName": "Canadian Content",
+      "wins": 2,
+      "losses": 3,
+      "ties": 0,
+      "pointsFor": 534.12,
+      "pointsAgainst": 532.02,
+      "playoffSeed": 10
+    },
+    {
+      "teamId": 15,
+      "teamName": "Average Joes",
+      "wins": 2,
+      "losses": 3,
+      "ties": 0,
+      "pointsFor": 506.02,
+      "pointsAgainst": 639.4,
+      "playoffSeed": 11
+    },
+    {
+      "teamId": 5,
+      "teamName": "Showtime",
+      "wins": 2,
+      "losses": 3,
+      "ties": 0,
+      "pointsFor": 509.4,
+      "pointsAgainst": 621.5,
+      "playoffSeed": 12
     },
     {
       "teamId": 3,
       "teamName": "ShowMeYourTDs !",
       "wins": 1,
-      "losses": 1,
+      "losses": 4,
       "ties": 0,
-      "pointsFor": 231.78,
-      "pointsAgainst": 203.58,
-      "playoffSeed": 4
+      "pointsFor": 509.14,
+      "pointsAgainst": 526.46,
+      "playoffSeed": 13
     },
     {
-      "teamId": 11,
-      "teamName": "Speed Kills",
-      "wins": 2,
-      "losses": 0,
-      "ties": 0,
-      "pointsFor": 231.78,
-      "pointsAgainst": 187.98,
-      "playoffSeed": 5
-    },
-    {
-      "teamId": 6,
-      "teamName": "Canadian Content",
+      "teamId": 14,
+      "teamName": "Agave Armada",
       "wins": 1,
-      "losses": 1,
+      "losses": 4,
       "ties": 0,
-      "pointsFor": 228.92,
-      "pointsAgainst": 179.26,
-      "playoffSeed": 6
+      "pointsFor": 504.16,
+      "pointsAgainst": 561.04,
+      "playoffSeed": 14
     },
     {
-      "teamId": 8,
-      "teamName": "MJ DA 🐐",
+      "teamId": 16,
+      "teamName": "Fantasy Guinball",
       "wins": 1,
-      "losses": 1,
+      "losses": 4,
       "ties": 0,
-      "pointsFor": 221.98,
-      "pointsAgainst": 234.14,
-      "playoffSeed": 7
-    },
-    {
-      "teamId": 4,
-      "teamName": "DET Knights",
-      "wins": 1,
-      "losses": 1,
-      "ties": 0,
-      "pointsFor": 182.44,
-      "pointsAgainst": 191.98,
-      "playoffSeed": 8
-    },
-    {
-      "teamId": 2,
-      "teamName": "Rolltide",
-      "wins": 1,
-      "losses": 1,
-      "ties": 0,
-      "pointsFor": 265.52,
-      "pointsAgainst": 254.3,
-      "playoffSeed": 9
-    },
-    {
-      "teamId": 9,
-      "teamName": "@ PaperChamp™️",
-      "wins": 1,
-      "losses": 1,
-      "ties": 0,
-      "pointsFor": 221.58,
-      "pointsAgainst": 220.22,
-      "playoffSeed": 10
+      "pointsFor": 612.64,
+      "pointsAgainst": 572.16,
+      "playoffSeed": 15
     },
     {
       "teamId": 13,
       "teamName": "Dart Side of the Moon",
       "wins": 1,
-      "losses": 1,
+      "losses": 4,
       "ties": 0,
-      "pointsFor": 206.7,
-      "pointsAgainst": 191.02,
-      "playoffSeed": 11
-    },
-    {
-      "teamId": 15,
-      "teamName": "Average Joes",
-      "wins": 1,
-      "losses": 1,
-      "ties": 0,
-      "pointsFor": 174.34,
-      "pointsAgainst": 226.62,
-      "playoffSeed": 12
-    },
-    {
-      "teamId": 5,
-      "teamName": "Showtime",
-      "wins": 1,
-      "losses": 1,
-      "ties": 0,
-      "pointsFor": 164.54,
-      "pointsAgainst": 220.34,
-      "playoffSeed": 13
-    },
-    {
-      "teamId": 16,
-      "teamName": "Fantasy Guinball",
-      "wins": 0,
-      "losses": 2,
-      "ties": 0,
-      "pointsFor": 247.8,
-      "pointsAgainst": 252.34,
-      "playoffSeed": 14
-    },
-    {
-      "teamId": 12,
-      "teamName": "Mobgang",
-      "wins": 0,
-      "losses": 2,
-      "ties": 0,
-      "pointsFor": 200.54,
-      "pointsAgainst": 233.54,
-      "playoffSeed": 15
-    },
-    {
-      "teamId": 14,
-      "teamName": "Agave Armada",
-      "wins": 0,
-      "losses": 2,
-      "ties": 0,
-      "pointsFor": 174.76,
-      "pointsAgainst": 216.62,
+      "pointsFor": 473.76,
+      "pointsAgainst": 557.22,
       "playoffSeed": 16
     }
   ],
   "matchups": [
     {
-      "home": "Showtime",
-      "homeProjected": 103.93092009,
-      "away": "G🏈ALINERS",
-      "awayProjected": 120.63362468
-    },
-    {
-      "home": "Canadian Content",
-      "homeProjected": 118.46490759,
+      "home": "G🏈ALINERS",
+      "homeProjected": 97.47293186,
       "away": "DET Knights",
-      "awayProjected": 95.32507638
+      "awayProjected": 69.39132018
     },
     {
-      "home": "New Kind of Kick (16tm,KPR,PPR)",
-      "homeProjected": 121.16242488,
-      "away": "Dart Side of the Moon",
-      "awayProjected": 101.97637275
+      "home": "Dart Side of the Moon",
+      "homeProjected": 95.6836161,
+      "away": "Fantasy Guinball",
+      "awayProjected": 93.43325247
     },
     {
       "home": "Rolltide",
-      "homeProjected": 119.45519376,
-      "away": "Fantasy Guinball",
-      "awayProjected": 103.43275216
+      "homeProjected": 71.64037103,
+      "away": "Showtime",
+      "awayProjected": 100.90960379
     },
     {
-      "home": "@ PaperChamp™️",
-      "homeProjected": 120.96922492,
-      "away": "ShowMeYourTDs !",
-      "awayProjected": 108.50450132
+      "home": "Canadian Content",
+      "homeProjected": 89.2803813,
+      "away": "New Kind of Kick (16tm,KPR,PPR)",
+      "awayProjected": 123.72197338
     },
     {
-      "home": "Speed Kills",
-      "homeProjected": 109.52218461,
+      "home": "ShowMeYourTDs !",
+      "homeProjected": 51.48458961,
       "away": "MJ DA 🐐",
-      "awayProjected": 117.43572916
+      "awayProjected": 116.168435
     },
     {
-      "home": "Agave Armada",
-      "homeProjected": 119.5974889,
-      "away": "Mobgang",
-      "awayProjected": 110.4331687
+      "home": "Mobgang",
+      "homeProjected": 49.00041909,
+      "away": "Average Joes",
+      "awayProjected": 82.96281983
     },
     {
       "home": "IRIGHTI",
-      "homeProjected": 114.97753202,
-      "away": "Average Joes",
-      "awayProjected": 113.92459899
+      "homeProjected": 111.78271067,
+      "away": "@ PaperChamp™️",
+      "awayProjected": 124.69525981
+    },
+    {
+      "home": "Speed Kills",
+      "homeProjected": 104.2827042,
+      "away": "Agave Armada",
+      "awayProjected": 91.11084549
     }
   ],
   "moves": [
     {
-      "date": "Sep 23",
-      "team": "Dart Side of the Moon",
-      "added": "Kaleb Johnson (RB, GB)",
-      "dropped": "Kirk Cousins (QB, LV)"
+      "date": "Oct 11",
+      "team": "Mobgang",
+      "added": null,
+      "dropped": "Ray Davis"
     },
     {
-      "date": "Sep 23",
-      "team": "Dart Side of the Moon",
-      "added": "Kirk Cousins (QB, LV)",
-      "dropped": "Jaxson Dart (QB, NYG)"
+      "date": "Oct 10",
+      "team": "Average Joes",
+      "added": "Chad Ryland",
+      "dropped": null
     },
     {
-      "date": "Sep 23",
-      "team": "New Kind of Kick (16tm,KPR,PPR)",
-      "added": "Jaguars D/ST",
-      "dropped": "Chargers D/ST"
+      "date": "Oct 10",
+      "team": "Canadian Content",
+      "added": "Browns D/ST",
+      "dropped": "Lions D/ST"
     },
     {
-      "date": "Sep 23",
-      "team": "@ PaperChamp™️",
-      "added": "Daniel Carlson (K, NO)",
-      "dropped": "Cairo Santos (K, CHI)"
+      "date": "Oct 10",
+      "team": "Canadian Content",
+      "added": "Roschon Johnson",
+      "dropped": "Isaiah Davis"
     },
     {
-      "date": "Sep 23",
-      "team": "MJ DA 🐐",
-      "added": "Keon Coleman (WR, BUF)",
-      "dropped": "Jaylin Noel (WR, HOU)"
+      "date": "Oct 10",
+      "team": "Fantasy Guinball",
+      "added": "Dameon Pierce",
+      "dropped": "Kalif Raymond"
     }
   ]
 }
