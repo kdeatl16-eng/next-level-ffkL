@@ -1,7 +1,7 @@
 {
   "season": 2026,
-  "updatedAt": "2026-10-20T22:50:00-04:00",
-  "updatedLabel": "OCT 20, 2026",
+  "updatedAt": "2026-10-24T15:53:07.375Z",
+  "updatedLabel": "OCT 24, 2026",
   "claimRules": {
     "timeZone": "America/New_York",
     "mondayAfterGame": {
@@ -15,8 +15,8 @@
       "payout": 20
     },
     "requiredChannel": "Official NEXT LEVEL FFKL GroupMe chat",
-    "requirement": "Bonus claims must be posted in the official GroupMe chat to count.",
-    "note": "Only the specified claim windows and payouts are defined; other times are not specified."
+    "requirement": "Claim your weekly bonus in the official NEXT LEVEL FFKL GroupMe chat. Both claim options follow the same process and eligibility rules. Only one payout is available for each weekly bonus.",
+    "note": "Monday: after Monday Night Football ends and before midnight Eastern, $10. Tuesday: 6:00–9:00 AM Eastern, $20. Claims outside these windows are not accepted."
   },
   "weeks": [
     {
