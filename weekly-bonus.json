@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updatedAt": "2026-10-24T15:53:07.375Z",
+  "updatedAt": "2026-10-25T02:32:09.185814+00:00",
   "updatedLabel": "OCT 24, 2026",
   "claimRules": {
     "timeZone": "America/New_York",
@@ -58,6 +58,14 @@
       "team": "@ PaperChamp™️",
       "result": "92.12 points",
       "detail": "Matthew Stafford 27.32 + Jaylen Warren 36.80 + George Pickens 28.00"
+    },
+    {
+      "week": 6,
+      "challenge": "QB King",
+      "status": "final",
+      "team": "Agave Armada",
+      "result": "27.34 points",
+      "detail": "Trevor Lawrence — highest-scoring starting QB of Week 6"
     }
   ]
 }
