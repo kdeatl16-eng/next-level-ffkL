@@ -287,9 +287,9 @@
     "season": 2026,
     "startWeek": 1,
     "endWeek": 14,
-    "throughWeek": 6,
-    "completedThroughWeek": 6,
-    "updatedAt": "2026-10-27T04:29:22.989Z",
+    "throughWeek": 7,
+    "completedThroughWeek": 7,
+    "updatedAt": "2026-10-27T12:05:59.202Z",
     "updatedLabel": "OCT 27, 2026",
     "includesInProgress": false,
     "pointBasis": "Official ESPN standings Points For (PF); no live scores, projections or additional bonuses",
@@ -297,114 +297,114 @@
       {
         "teamId": 9,
         "teamName": "@ PaperChamp™️",
-        "pointsFor": 754.26,
+        "pointsFor": 860.16,
         "rank": 1,
         "gapToLeader": 0
       },
       {
-        "teamId": 2,
-        "teamName": "Rolltide",
-        "pointsFor": 734.98,
+        "teamId": 16,
+        "teamName": "Fantasy Guinball",
+        "pointsFor": 858,
         "rank": 2,
-        "gapToLeader": 19.28
+        "gapToLeader": 2.16
       },
       {
         "teamId": 10,
         "teamName": "New Kind of Kick (16tm,KPR,PPR)",
-        "pointsFor": 731.74,
+        "pointsFor": 840.96,
         "rank": 3,
-        "gapToLeader": 22.52
-      },
-      {
-        "teamId": 8,
-        "teamName": "MJ DA 🐐",
-        "pointsFor": 719.64,
-        "rank": 4,
-        "gapToLeader": 34.62
+        "gapToLeader": 19.2
       },
       {
         "teamId": 7,
         "teamName": "IRIGHTI",
-        "pointsFor": 718.74,
+        "pointsFor": 837.96,
+        "rank": 4,
+        "gapToLeader": 22.2
+      },
+      {
+        "teamId": 2,
+        "teamName": "Rolltide",
+        "pointsFor": 825.4,
         "rank": 5,
-        "gapToLeader": 35.52
+        "gapToLeader": 34.76
       },
       {
-        "teamId": 16,
-        "teamName": "Fantasy Guinball",
-        "pointsFor": 710.72,
+        "teamId": 8,
+        "teamName": "MJ DA 🐐",
+        "pointsFor": 817.72,
         "rank": 6,
-        "gapToLeader": 43.54
-      },
-      {
-        "teamId": 1,
-        "teamName": "G🏈ALINERS",
-        "pointsFor": 678.2,
-        "rank": 7,
-        "gapToLeader": 76.06
+        "gapToLeader": 42.44
       },
       {
         "teamId": 14,
         "teamName": "Agave Armada",
-        "pointsFor": 656.9,
-        "rank": 8,
-        "gapToLeader": 97.36
+        "pointsFor": 791.12,
+        "rank": 7,
+        "gapToLeader": 69.04
       },
       {
         "teamId": 11,
         "teamName": "Speed Kills",
-        "pointsFor": 653.04,
-        "rank": 9,
-        "gapToLeader": 101.22
-      },
-      {
-        "teamId": 6,
-        "teamName": "Canadian Content",
-        "pointsFor": 639.3,
-        "rank": 10,
-        "gapToLeader": 114.96
-      },
-      {
-        "teamId": 3,
-        "teamName": "ShowMeYourTDs !",
-        "pointsFor": 610.84,
-        "rank": 11,
-        "gapToLeader": 143.42
+        "pointsFor": 752.82,
+        "rank": 8,
+        "gapToLeader": 107.34
       },
       {
         "teamId": 15,
         "teamName": "Average Joes",
-        "pointsFor": 595.02,
+        "pointsFor": 746.86,
+        "rank": 9,
+        "gapToLeader": 113.3
+      },
+      {
+        "teamId": 1,
+        "teamName": "G🏈ALINERS",
+        "pointsFor": 745.84,
+        "rank": 10,
+        "gapToLeader": 114.32
+      },
+      {
+        "teamId": 6,
+        "teamName": "Canadian Content",
+        "pointsFor": 742.42,
+        "rank": 11,
+        "gapToLeader": 117.74
+      },
+      {
+        "teamId": 3,
+        "teamName": "ShowMeYourTDs !",
+        "pointsFor": 696.26,
         "rank": 12,
-        "gapToLeader": 159.24
+        "gapToLeader": 163.9
       },
       {
         "teamId": 5,
         "teamName": "Showtime",
-        "pointsFor": 591.6,
+        "pointsFor": 677.12,
         "rank": 13,
-        "gapToLeader": 162.66
+        "gapToLeader": 183.04
       },
       {
         "teamId": 12,
         "teamName": "Mobgang",
-        "pointsFor": 558.56,
+        "pointsFor": 656.94,
         "rank": 14,
-        "gapToLeader": 195.7
-      },
-      {
-        "teamId": 13,
-        "teamName": "Dart Side of the Moon",
-        "pointsFor": 554.86,
-        "rank": 15,
-        "gapToLeader": 199.4
+        "gapToLeader": 203.22
       },
       {
         "teamId": 4,
         "teamName": "DET Knights",
-        "pointsFor": 549.58,
+        "pointsFor": 654.94,
+        "rank": 15,
+        "gapToLeader": 205.22
+      },
+      {
+        "teamId": 13,
+        "teamName": "Dart Side of the Moon",
+        "pointsFor": 640.44,
         "rank": 16,
-        "gapToLeader": 204.68
+        "gapToLeader": 219.72
       }
     ],
     "history": [
@@ -651,6 +651,47 @@
             "pointsFor": 718.74,
             "rank": 5,
             "gapToLeader": 35.52
+          }
+        ]
+      },
+      {
+        "week": 7,
+        "status": "final",
+        "top5": [
+          {
+            "teamId": 9,
+            "teamName": "@ PaperChamp™️",
+            "pointsFor": 860.16,
+            "rank": 1,
+            "gapToLeader": 0
+          },
+          {
+            "teamId": 16,
+            "teamName": "Fantasy Guinball",
+            "pointsFor": 858,
+            "rank": 2,
+            "gapToLeader": 2.16
+          },
+          {
+            "teamId": 10,
+            "teamName": "New Kind of Kick (16tm,KPR,PPR)",
+            "pointsFor": 840.96,
+            "rank": 3,
+            "gapToLeader": 19.2
+          },
+          {
+            "teamId": 7,
+            "teamName": "IRIGHTI",
+            "pointsFor": 837.96,
+            "rank": 4,
+            "gapToLeader": 22.2
+          },
+          {
+            "teamId": 2,
+            "teamName": "Rolltide",
+            "pointsFor": 825.4,
+            "rank": 5,
+            "gapToLeader": 34.76
           }
         ]
       }
