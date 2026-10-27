@@ -2,13 +2,13 @@
   "leagueId": "179274",
   "leagueName": "Next Level FFKL Est.2014",
   "season": 2026,
-  "currentWeek": 7,
+  "currentWeek": 8,
   "teamCount": 16,
   "keepersPerTeam": 2,
   "regularSeasonHFA": 2,
   "playoffHFA": 3,
-  "updatedAt": "2026-10-24T15:52:27.629Z",
-  "updatedLabel": "OCT 24, 2026",
+  "updatedAt": "2026-10-27T04:29:22.989Z",
+  "updatedLabel": "OCT 27, 2026",
   "standings": [
     {
       "teamId": 7,
@@ -173,79 +173,103 @@
   ],
   "matchups": [
     {
-      "home": "New Kind of Kick (16tm,KPR,PPR)",
-      "homeProjected": 117.91125261,
-      "away": "G🏈ALINERS",
-      "awayProjected": 104.30554614,
+      "home": "G🏈ALINERS",
+      "homeProjected": 84.91688909,
+      "away": "ShowMeYourTDs !",
+      "awayProjected": 104.20790549,
       "homeScore": 0,
       "awayScore": 0,
-      "status": "in_progress"
+      "status": "upcoming"
+    },
+    {
+      "home": "DET Knights",
+      "homeProjected": 102.34242562,
+      "away": "MJ DA 🐐 ",
+      "awayProjected": 74.82726759,
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "upcoming"
+    },
+    {
+      "home": "Dart Side of the Moon",
+      "homeProjected": 60.27057768,
+      "away": "Mobgang",
+      "awayProjected": 90.19752635,
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "upcoming"
+    },
+    {
+      "home": "Fantasy Guinball",
+      "homeProjected": 122.06994308,
+      "away": "Average Joes",
+      "awayProjected": 122.54495114,
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "upcoming"
     },
     {
       "home": "Rolltide ",
-      "homeProjected": 109.60691818,
-      "away": "DET Knights",
-      "awayProjected": 116.68464659,
+      "homeProjected": 85.12098481,
+      "away": "IRIGHTI",
+      "awayProjected": 107.38545086,
       "homeScore": 0,
       "awayScore": 0,
-      "status": "in_progress"
+      "status": "upcoming"
     },
     {
       "home": "Showtime",
-      "homeProjected": 95.36176898,
-      "away": "Dart Side of the Moon",
-      "awayProjected": 90.55377129,
+      "homeProjected": 95.67617546,
+      "away": "@ PaperChamp™️",
+      "awayProjected": 86.55408308,
       "homeScore": 0,
-      "awayScore": 26.1,
-      "status": "in_progress"
+      "awayScore": 0,
+      "status": "upcoming"
     },
     {
       "home": "Canadian Content",
-      "homeProjected": 104.63591911,
-      "away": "Fantasy Guinball",
-      "awayProjected": 105.60817807,
+      "homeProjected": 49.8225034,
+      "away": "Speed Kills",
+      "awayProjected": 95.70172577,
       "homeScore": 0,
       "awayScore": 0,
-      "status": "in_progress"
+      "status": "upcoming"
     },
     {
-      "home": "Agave Armada",
-      "homeProjected": 115.45168527,
-      "away": "ShowMeYourTDs !",
-      "awayProjected": 113.94191313,
-      "homeScore": 43.6,
-      "awayScore": 22.12,
-      "status": "in_progress"
-    },
-    {
-      "home": "IRIGHTI",
-      "homeProjected": 106.33458428,
-      "away": "MJ DA 🐐 ",
-      "awayProjected": 118.99548919,
+      "home": "New Kind of Kick (16tm,KPR,PPR)",
+      "homeProjected": 74.32323714,
+      "away": "Agave Armada",
+      "awayProjected": 109.70353068,
       "homeScore": 0,
-      "awayScore": 27.8,
-      "status": "in_progress"
-    },
-    {
-      "home": "@ PaperChamp™️",
-      "homeProjected": 120.25816007,
-      "away": "Mobgang",
-      "awayProjected": 98.86659026,
-      "homeScore": 14.1,
       "awayScore": 0,
-      "status": "in_progress"
-    },
-    {
-      "home": "Speed Kills",
-      "homeProjected": 108.61478122,
-      "away": "Average Joes",
-      "awayProjected": 128.24484768,
-      "homeScore": 29.9,
-      "awayScore": 27.44,
-      "status": "in_progress"
+      "status": "upcoming"
     }
   ],
   "moves": [
+    {
+      "date": "Oct 25",
+      "team": "Showtime",
+      "added": "Ravens D/ST",
+      "dropped": null
+    },
+    {
+      "date": "Oct 25",
+      "team": "New Kind of Kick (16tm,KPR,PPR)",
+      "added": "Emanuel Wilson",
+      "dropped": "Kaelon Black"
+    },
+    {
+      "date": "Oct 24",
+      "team": "Agave Armada",
+      "added": "Tyler Huntley",
+      "dropped": "Daniel Jones"
+    },
+    {
+      "date": "Oct 24",
+      "team": "Dart Side of the Moon",
+      "added": "Bam Knight",
+      "dropped": "James Conner"
+    },
     {
       "date": "Oct 23",
       "team": "G🏈ALINERS",
@@ -257,160 +281,130 @@
       "team": "New Kind of Kick (16tm,KPR,PPR)",
       "added": "Kaelon Black",
       "dropped": "Emanuel Wilson"
-    },
-    {
-      "date": "Oct 22",
-      "team": "Dart Side of the Moon",
-      "added": "Colby Parkinson",
-      "dropped": "Jaguars D/ST"
-    },
-    {
-      "date": "Oct 22",
-      "team": "Dart Side of the Moon",
-      "added": "Cairo Santos",
-      "dropped": "Eddy Pineiro"
-    },
-    {
-      "date": "Oct 22",
-      "team": "New Kind of Kick (16tm,KPR,PPR)",
-      "added": "Emmett Johnson",
-      "dropped": "Jaleel McLaughlin"
-    },
-    {
-      "date": "Oct 22",
-      "team": "Canadian Content",
-      "added": "Dylan Sampson",
-      "dropped": "Pierre Strong Jr."
-    },
-    {
-      "date": "Oct 22",
-      "team": "Agave Armada",
-      "added": "Brian Thomas Jr.",
-      "dropped": "Cyrus Allen"
     }
   ],
   "mvpRace": {
     "season": 2026,
     "startWeek": 1,
     "endWeek": 14,
-    "throughWeek": 7,
+    "throughWeek": 6,
     "completedThroughWeek": 6,
-    "updatedAt": "2026-10-24T15:57:19.426Z",
-    "updatedLabel": "OCT 24, 2026",
-    "includesInProgress": true,
-    "pointBasis": "ESPN team Points For, including league home-field scoring",
+    "updatedAt": "2026-10-27T04:29:22.989Z",
+    "updatedLabel": "OCT 27, 2026",
+    "includesInProgress": false,
+    "pointBasis": "Official ESPN standings Points For (PF); no live scores, projections or additional bonuses",
     "standings": [
       {
         "teamId": 9,
         "teamName": "@ PaperChamp™️",
-        "pointsFor": 770.36,
+        "pointsFor": 754.26,
         "rank": 1,
         "gapToLeader": 0
       },
       {
-        "teamId": 8,
-        "teamName": "MJ DA 🐐",
-        "pointsFor": 747.44,
-        "rank": 2,
-        "gapToLeader": 22.92
-      },
-      {
         "teamId": 2,
         "teamName": "Rolltide",
-        "pointsFor": 736.98,
-        "rank": 3,
-        "gapToLeader": 33.38
+        "pointsFor": 734.98,
+        "rank": 2,
+        "gapToLeader": 19.28
       },
       {
         "teamId": 10,
         "teamName": "New Kind of Kick (16tm,KPR,PPR)",
-        "pointsFor": 733.74,
+        "pointsFor": 731.74,
+        "rank": 3,
+        "gapToLeader": 22.52
+      },
+      {
+        "teamId": 8,
+        "teamName": "MJ DA 🐐",
+        "pointsFor": 719.64,
         "rank": 4,
-        "gapToLeader": 36.62
+        "gapToLeader": 34.62
       },
       {
         "teamId": 7,
         "teamName": "IRIGHTI",
-        "pointsFor": 720.74,
+        "pointsFor": 718.74,
         "rank": 5,
-        "gapToLeader": 49.62
+        "gapToLeader": 35.52
       },
       {
         "teamId": 16,
         "teamName": "Fantasy Guinball",
         "pointsFor": 710.72,
         "rank": 6,
-        "gapToLeader": 59.64
-      },
-      {
-        "teamId": 14,
-        "teamName": "Agave Armada",
-        "pointsFor": 702.5,
-        "rank": 7,
-        "gapToLeader": 67.86
-      },
-      {
-        "teamId": 11,
-        "teamName": "Speed Kills",
-        "pointsFor": 684.94,
-        "rank": 8,
-        "gapToLeader": 85.42
+        "gapToLeader": 43.54
       },
       {
         "teamId": 1,
         "teamName": "G🏈ALINERS",
         "pointsFor": 678.2,
+        "rank": 7,
+        "gapToLeader": 76.06
+      },
+      {
+        "teamId": 14,
+        "teamName": "Agave Armada",
+        "pointsFor": 656.9,
+        "rank": 8,
+        "gapToLeader": 97.36
+      },
+      {
+        "teamId": 11,
+        "teamName": "Speed Kills",
+        "pointsFor": 653.04,
         "rank": 9,
-        "gapToLeader": 92.16
+        "gapToLeader": 101.22
       },
       {
         "teamId": 6,
         "teamName": "Canadian Content",
-        "pointsFor": 641.3,
+        "pointsFor": 639.3,
         "rank": 10,
-        "gapToLeader": 129.06
+        "gapToLeader": 114.96
       },
       {
         "teamId": 3,
         "teamName": "ShowMeYourTDs !",
-        "pointsFor": 632.96,
+        "pointsFor": 610.84,
         "rank": 11,
-        "gapToLeader": 137.4
+        "gapToLeader": 143.42
       },
       {
         "teamId": 15,
         "teamName": "Average Joes",
-        "pointsFor": 622.46,
+        "pointsFor": 595.02,
         "rank": 12,
-        "gapToLeader": 147.9
+        "gapToLeader": 159.24
       },
       {
         "teamId": 5,
         "teamName": "Showtime",
-        "pointsFor": 593.6,
+        "pointsFor": 591.6,
         "rank": 13,
-        "gapToLeader": 176.76
-      },
-      {
-        "teamId": 13,
-        "teamName": "Dart Side of the Moon",
-        "pointsFor": 580.96,
-        "rank": 14,
-        "gapToLeader": 189.4
+        "gapToLeader": 162.66
       },
       {
         "teamId": 12,
         "teamName": "Mobgang",
         "pointsFor": 558.56,
+        "rank": 14,
+        "gapToLeader": 195.7
+      },
+      {
+        "teamId": 13,
+        "teamName": "Dart Side of the Moon",
+        "pointsFor": 554.86,
         "rank": 15,
-        "gapToLeader": 211.8
+        "gapToLeader": 199.4
       },
       {
         "teamId": 4,
         "teamName": "DET Knights",
         "pointsFor": 549.58,
         "rank": 16,
-        "gapToLeader": 220.78
+        "gapToLeader": 204.68
       }
     ],
     "history": [
@@ -657,47 +651,6 @@
             "pointsFor": 718.74,
             "rank": 5,
             "gapToLeader": 35.52
-          }
-        ]
-      },
-      {
-        "week": 7,
-        "status": "in_progress",
-        "top5": [
-          {
-            "teamId": 9,
-            "teamName": "@ PaperChamp™️",
-            "pointsFor": 770.36,
-            "rank": 1,
-            "gapToLeader": 0
-          },
-          {
-            "teamId": 8,
-            "teamName": "MJ DA 🐐",
-            "pointsFor": 747.44,
-            "rank": 2,
-            "gapToLeader": 22.92
-          },
-          {
-            "teamId": 2,
-            "teamName": "Rolltide",
-            "pointsFor": 736.98,
-            "rank": 3,
-            "gapToLeader": 33.38
-          },
-          {
-            "teamId": 10,
-            "teamName": "New Kind of Kick (16tm,KPR,PPR)",
-            "pointsFor": 733.74,
-            "rank": 4,
-            "gapToLeader": 36.62
-          },
-          {
-            "teamId": 7,
-            "teamName": "IRIGHTI",
-            "pointsFor": 720.74,
-            "rank": 5,
-            "gapToLeader": 49.62
           }
         ]
       }
