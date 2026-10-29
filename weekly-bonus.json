@@ -1,7 +1,7 @@
 {
   "season": 2026,
-  "updatedAt": "2026-10-27T04:29:22.989Z",
-  "updatedLabel": "OCT 27, 2026",
+  "updatedAt": "2026-10-29T18:11:07.063Z",
+  "updatedLabel": "OCT 29, 2026",
   "claimRules": {
     "timeZone": "America/New_York",
     "mondayAfterGame": {
@@ -70,10 +70,22 @@
     {
       "week": 7,
       "challenge": "Flex Appeal",
-      "status": "live",
+      "status": "final",
       "team": "Average Joes",
       "result": "36.50 points",
-      "detail": "Tony Pollard — highest-scoring player in the FLEX slot; provisional pending ESPN finalization"
+      "detail": "Tony Pollard — highest-scoring player in the FLEX slot. Unclaimed, confirmed by Commissioner.",
+      "claimStatus": "unclaimed"
+    }
+  ],
+  "specialBonuses": [
+    {
+      "week": 7,
+      "challenge": "National TE Day",
+      "status": "final",
+      "team": "Average Joes",
+      "result": "27.10 points",
+      "detail": "Trey McBride. Unclaimed, confirmed by Commissioner.",
+      "claimStatus": "unclaimed"
     }
   ]
 }
