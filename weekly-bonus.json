@@ -1,7 +1,7 @@
 {
   "season": 2026,
-  "updatedAt": "2026-10-29T18:11:07.063Z",
-  "updatedLabel": "OCT 29, 2026",
+  "updatedAt": "2026-11-03T15:13:05.512Z",
+  "updatedLabel": "NOV 3, 2026",
   "claimRules": {
     "timeZone": "America/New_York",
     "mondayAfterGame": {
@@ -74,6 +74,15 @@
       "team": "Average Joes",
       "result": "36.50 points",
       "detail": "Tony Pollard — highest-scoring player in the FLEX slot. Unclaimed, confirmed by Commissioner.",
+      "claimStatus": "unclaimed"
+    },
+    {
+      "week": 8,
+      "challenge": "Bench Mob",
+      "status": "final",
+      "team": "ShowMeYourTDs !",
+      "result": "77.00 points",
+      "detail": "Bench slots only; IR excluded. Tyler Allgeier 36.10 + Kyler Murray 19.90 + Malik Washington 15.00 + Aaron Jones Sr. 6.00; Chris Godwin Jr. and Jake Ferguson 0.00. Unclaimed, confirmed by Commissioner.",
       "claimStatus": "unclaimed"
     }
   ],
