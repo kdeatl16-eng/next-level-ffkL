@@ -1,7 +1,7 @@
 {
   "season": 2026,
-  "updatedAt": "2026-11-03T15:13:05.512Z",
-  "updatedLabel": "NOV 3, 2026",
+  "updatedAt": "2026-11-10T14:57:25.443Z",
+  "updatedLabel": "NOV 10, 2026",
   "claimRules": {
     "timeZone": "America/New_York",
     "mondayAfterGame": {
@@ -83,6 +83,15 @@
       "team": "ShowMeYourTDs !",
       "result": "77.00 points",
       "detail": "Bench slots only; IR excluded. Tyler Allgeier 36.10 + Kyler Murray 19.90 + Malik Washington 15.00 + Aaron Jones Sr. 6.00; Chris Godwin Jr. and Jake Ferguson 0.00. Unclaimed, confirmed by Commissioner.",
+      "claimStatus": "unclaimed"
+    },
+    {
+      "week": 9,
+      "challenge": "WR1",
+      "status": "final",
+      "team": "Fantasy Guinball",
+      "result": "35.00 points",
+      "detail": "Puka Nacua — highest-scoring starting WR of Week 9. Unclaimed, confirmed by Commissioner.",
       "claimStatus": "unclaimed"
     }
   ],
