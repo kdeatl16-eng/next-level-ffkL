@@ -1,7 +1,7 @@
 {
   "season": 2026,
-  "updatedAt": "2026-11-10T14:57:25.443Z",
-  "updatedLabel": "NOV 10, 2026",
+  "updatedAt": "2026-11-17T16:32:39.122981+00:00",
+  "updatedLabel": "NOV 17, 2026",
   "claimRules": {
     "timeZone": "America/New_York",
     "mondayAfterGame": {
@@ -92,6 +92,15 @@
       "team": "Fantasy Guinball",
       "result": "35.00 points",
       "detail": "Puka Nacua — highest-scoring starting WR of Week 9. Unclaimed, confirmed by Commissioner.",
+      "claimStatus": "unclaimed"
+    },
+    {
+      "week": 10,
+      "challenge": "Special Teams Boss",
+      "status": "final",
+      "team": "Speed Kills",
+      "result": "28.00 points",
+      "detail": "Brandon Aubrey 12.00 + Rams D/ST 16.00 — highest combined starting K and D/ST score. Unclaimed, confirmed by Commissioner KD.",
       "claimStatus": "unclaimed"
     }
   ],
