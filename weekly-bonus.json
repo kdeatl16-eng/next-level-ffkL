@@ -1,7 +1,7 @@
 {
   "season": 2026,
-  "updatedAt": "2026-11-17T16:32:39.122981+00:00",
-  "updatedLabel": "NOV 17, 2026",
+  "updatedAt": "2026-11-24T15:05:50.018010+00:00",
+  "updatedLabel": "NOV 24, 2026",
   "claimRules": {
     "timeZone": "America/New_York",
     "mondayAfterGame": {
@@ -101,6 +101,15 @@
       "team": "Speed Kills",
       "result": "28.00 points",
       "detail": "Brandon Aubrey 12.00 + Rams D/ST 16.00 — highest combined starting K and D/ST score. Unclaimed, confirmed by Commissioner KD.",
+      "claimStatus": "unclaimed"
+    },
+    {
+      "week": 11,
+      "challenge": "One-Man Army",
+      "status": "final",
+      "team": "IRIGHTI",
+      "result": "35.90 points",
+      "detail": "Dak Prescott — highest-scoring individual offensive starter. Unclaimed, confirmed by Commissioner KD.",
       "claimStatus": "unclaimed"
     }
   ],
